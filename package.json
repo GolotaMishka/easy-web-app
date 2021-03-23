@@ -6,7 +6,9 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "dev": "webpack-dev-server --config config/webpack.config.development.js",
+    "start:development": "webpack-dev-server --config config/webpack.config.development.js",
+    "start:staging": "cross-env PROJECT_ENV=staging npm run start",
+    "start:production": "cross-env PROJECT_ENV=production npm run start",
     "build": "webpack --config config/webpack.config.production.js",
     "build:development": "cross-env BABEL_ENV=production PROJECT_ENV=development yarn build",
     "build:staging": "cross-env BABEL_ENV=production PROJECT_ENV=staging yarn build",
