@@ -1,4 +1,4 @@
-export const basePath = '/auditor';
+export const basePath = '/';
 
 const applyBaseUrl = (url: string): string => `${basePath}/${url}`;
 
