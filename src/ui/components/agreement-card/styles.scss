@@ -1,0 +1,67 @@
+@import 'core';
+
+.card {
+  border: 1px solid $border;
+  width: 100%;
+
+  &Header {
+    align-items: center;
+    background-color: $tableBorder;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 22px;
+
+    &Title {
+      color: $text;
+      text-decoration: underline;
+
+      &Disabled {
+        color: #b4b4b4;
+        text-decoration: none;
+      }
+    }
+
+    &Disabled {
+      background-color: $background;
+    }
+  }
+
+  &Content {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    height: 184px;
+    justify-content: space-between;
+    padding: 20px 22px;
+    position: relative;
+
+    &Title {
+      font-style: italic;
+    }
+
+    &Button {
+      bottom: 20px;
+      max-width: 240px;
+      position: absolute;
+    }
+
+    &Disabled {
+      opacity: 0.4;
+    }
+
+    &List {
+      max-height: 144px;
+      overflow-y: auto;
+
+      &Row {
+        display: flex;
+        padding-bottom: 20px;
+
+        &Header {
+          width: 40%;
+        }
+      }
+    }
+  }
+}

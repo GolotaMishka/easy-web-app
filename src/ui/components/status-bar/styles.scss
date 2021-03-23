@@ -1,0 +1,83 @@
+@import 'core';
+
+.wizzard {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+
+  &Step {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+
+    &Box {
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: center;
+
+      &Active {
+        color: $success !important;
+
+        &Point {
+          background-color: $success;
+          border: 1px solid $success !important;
+        }
+      }
+
+      &Figures {
+        display: flex;
+        width: 100%;
+
+        &Line {
+          border-top: 1px solid $tableBorder;
+          display: flex;
+          flex-grow: 1;
+          margin-top: 8px;
+
+          &Active {
+            border-top: 1px solid $success;
+          }
+        }
+
+        &Point {
+          align-items: center;
+          border: 1px solid $tableBorder;
+          border-radius: 50%;
+          display: flex;
+          height: 14px;
+          justify-content: center;
+          width: 14px;
+        }
+      }
+
+      &Info {
+        align-items: center;
+        bottom: 20px;
+        display: flex;
+        position: absolute;
+        right: -30px;
+        width: max-content;
+
+        &Icon {
+          color: $tableBorder;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    &First {
+      flex-grow: 0;
+
+      .wizzardStepBoxFigures {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &Disabled {
+    pointer-events: none;
+  }
+}

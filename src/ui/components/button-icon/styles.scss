@@ -1,0 +1,38 @@
+@import 'core';
+
+.button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  line-height: 1;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+
+  &Icon {
+    height: 16px;
+    vertical-align: middle;
+    width: 16px;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:focus {
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+
+  &:active {
+    background-color: transparent;
+    border: 1px solid transparent;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}

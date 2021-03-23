@@ -1,0 +1,15 @@
+@import 'core';
+
+.stamp {
+  align-items: center;
+  display: flex;
+
+  &Icon {
+    color: $light-grey;
+    margin-right: 5px;
+
+    &Success {
+      color: $success;
+    }
+  }
+}

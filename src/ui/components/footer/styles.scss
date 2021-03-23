@@ -1,0 +1,78 @@
+@import 'core';
+
+.footer {
+  align-items: center;
+  background: $dark-grey;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+
+  &Tag {
+    display: flex;
+    flex-direction: column;
+    height: 71px;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 2%;
+  }
+
+  &Disclaimer {
+    &Wrapper {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    &Icon {
+      color: white;
+      height: 9px;
+      width: 9px;
+    }
+
+    font-family: $secondaryFont;
+    line-height: 17px;
+    width: 519px;
+
+    @include font($s, $semi-bold, white, $primaryFont);
+  }
+
+  &Wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &TopNav {
+    display: flex;
+    flex-grow: 1;
+    height: 65px;
+
+    &Menu {
+      border-bottom: 1px solid white;
+      display: flex;
+      margin-bottom: 6px;
+      padding: 20px 0 20px 0;
+      width: 100%;
+
+      &Item {
+        align-items: center;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        outline: none;
+        padding: 0 15px;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+
+        @include font($s, $semi-bold, white, $primaryFont);
+
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

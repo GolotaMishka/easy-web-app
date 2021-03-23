@@ -1,0 +1,41 @@
+@import 'core';
+
+.popUpBox {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+
+  &Wrapper {
+    align-items: center;
+    background-color: $white;
+    border: 1px solid $border;
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px 0 rgba(216, 216, 216, 0.5);
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    min-height: 260px;
+    min-width: 560px;
+    padding: 24px 30px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    &Header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      width: 100%;
+
+      &Close {
+        color: $border;
+      }
+    }
+  }
+}

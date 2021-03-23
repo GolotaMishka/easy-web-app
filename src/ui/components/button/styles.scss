@@ -1,0 +1,137 @@
+@import 'core';
+
+.button {
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  display: flex;
+  font-family: inherit;
+  font-size: $m;
+  justify-content: center;
+  line-height: 1;
+  min-width: 100px;
+  padding: 9px 10px;
+
+  &Primary {
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+      background-color: darken($primary, 1.2);
+    }
+
+    &:focus {
+      border-color: $text;
+    }
+
+    &:active {
+      background-color: darken($primary, 1.2);
+    }
+
+    &Icon {
+      color: $white;
+      margin-right: 5px;
+    }
+  }
+
+  &Secondary {
+    background-color: $white;
+    border: 1px solid $primary;
+    color: $primary;
+    padding: 12px 10px;
+
+    &:hover {
+      background-color: $white;
+    }
+
+    &:focus {
+      border-color: lighten($primary, 0.2);
+    }
+
+    &:active {
+      background-color: lighten($primary, 0.2);
+    }
+
+    &Icon {
+      color: $primary;
+      margin-right: 5px;
+    }
+  }
+
+  &Large {
+    font-size: $l;
+    line-height: 16px;
+    padding: 13px 22px 15px;
+  }
+
+  &:disabled,
+  &Disabled {
+    opacity: 0.4;
+    pointer-events: none !important;
+  }
+
+  &Underlined {
+    background: inherit;
+    border-bottom: 1px solid $primary;
+    color: $primary;
+    display: inline-block;
+    min-width: max-content;
+    padding: 0;
+
+    &Disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}
+
+.addButton {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+
+  &Plus {
+    background-color: $terracotta;
+    height: 40px;
+    opacity: 0.8;
+    width: 40px;
+
+    &Icon {
+      color: $white;
+      margin-top: 11px;
+    }
+  }
+
+  &Content {
+    align-items: center;
+    background-color: $primary;
+    display: flex;
+    height: 40px;
+    padding: 0 12px;
+  }
+
+  &Disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.backLink {
+  align-items: center;
+  border: solid 1px $border;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  padding: 24px 11px;
+
+  &Icon {
+    height: 16px;
+    width: 16px;
+  }
+}
