@@ -132,5 +132,9 @@
   "resolutions": {
     "lodash": "4.17.21",
     "axios": "0.21.1"
+  },
+  "engines": {
+    "node": "12.5.0",
+    "npm": "6.9.0"
   }
 }
