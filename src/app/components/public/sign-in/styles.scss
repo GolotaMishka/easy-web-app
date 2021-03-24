@@ -1,0 +1,28 @@
+@import 'core';
+
+.page {
+  display: flex;
+  min-height: 100vh;
+
+  &Left {
+    background-color: $primary;
+    width: 50%;
+  }
+
+  &Right {
+    align-items: center;
+    background-color: $background;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+
+    &Form {
+      width: 80%;
+
+      &Field {
+        background-color: $background;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

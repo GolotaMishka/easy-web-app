@@ -1,13 +1,17 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import { publicPath, homePath, signInPath } from 'app/constants/url/user';
+import { homePath, signInPath, signUpPath } from 'app/constants/url/user';
 import HomeContainer from './home';
+import SignInContainer from './sign-in';
+import SignUpContainer from './sign-up';
 
 const PublicRoute = () => (
   <Switch>
     <Route path={homePath} component={HomeContainer} />
-    <Route path={signInPath} component={() => <div>sign in</div>} />
-    <Redirect from={publicPath} to={homePath} />
+    <Route path={signInPath} component={SignInContainer} />
+    <Route path={signUpPath} component={SignUpContainer} />
+
+    <Redirect to={homePath} />
   </Switch>
 );
 

@@ -1,8 +1,6 @@
 import React, { ReactElement } from 'react';
-// import Home from 'app/components/routes/public/home';
+import Home from 'app/components/public/home';
 
-const HomeContainer = (): ReactElement => {
-  return <div>Home</div>;
-};
+const HomeContainer = (): ReactElement => <Home />;
 
 export default HomeContainer;
