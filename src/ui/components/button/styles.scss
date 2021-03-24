@@ -16,7 +16,7 @@
 
   &Primary {
     background-color: $primary;
-    color: $white;
+    // color: $white;
 
     &:hover {
       background-color: darken($primary, 1.2);
