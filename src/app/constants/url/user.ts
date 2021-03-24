@@ -1,5 +1,12 @@
-export const basePath = '/';
+export const appBasePath = '/app';
+export const publicPath = '/public';
 
-const applyBaseUrl = (url: string): string => `${basePath}/${url}`;
+const applyBaseUrl = (url: string): string => `${appBasePath}/${url}`;
+const applyPublicUrl = (url: string): string => `${publicPath}/${url}`;
 
-export const homePath: string = applyBaseUrl('home');
+// public
+export const homePath: string = applyPublicUrl('home');
+export const signInPath: string = applyPublicUrl('sign-in');
+
+// private
+export const learningPath: string = applyBaseUrl('learning');

@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "start:development": "webpack-dev-server --config config/webpack.config.development.js",
+    "dev": "webpack-dev-server --config config/webpack.config.development.js",
     "start:staging": "cross-env PROJECT_ENV=staging npm run start",
     "start:production": "cross-env PROJECT_ENV=production npm run start",
     "build": "webpack --config config/webpack.config.production.js",
