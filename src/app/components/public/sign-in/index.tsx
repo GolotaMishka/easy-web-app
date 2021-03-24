@@ -24,11 +24,11 @@ const SignIn: React.FC<SignInProps> = ({ isSubmitting, isValid, errors }: SignIn
             weight={Text.weights.semiBold}
             color={Text.colors.white}
           >
-            Welcome!
+            Welcome Back!
           </Text>
           <div className={s.pageLeftContentDescription}>
             <Text size={Text.sizes.xl} color={Text.colors.white}>
-              Still not with us? Create an <br /> account and start to learn
+              Still not with us? Create an <br /> account and start to learn{' '}
             </Text>
           </div>
           <div className={s.pageLeftContentButton}>
