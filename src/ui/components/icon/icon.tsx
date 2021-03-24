@@ -29,6 +29,9 @@ import zoomIn from './icons/zoom-in.svg';
 import zoomOut from './icons/zoom-out.svg';
 import percent from './icons/percent.svg';
 import copyright from './icons/copyright.svg';
+import user from './icons/user.svg';
+import lock from './icons/lock.svg';
+import mail from './icons/mail.svg';
 
 export interface IconProps extends React.SVGAttributes<SVGElement> {
   icon: any;
@@ -84,4 +87,7 @@ Icon.icons = {
   zoomOut,
   percent,
   copyright,
+  lock,
+  user,
+  mail,
 };

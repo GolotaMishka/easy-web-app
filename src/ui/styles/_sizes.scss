@@ -5,6 +5,7 @@ $l: 16px;
 $xl: 18px;
 $xxl: 20px;
 $xxxl: 24px;
+$xxxxl: 30px;
 
 $sizes: (
   xs: $xs,
@@ -14,6 +15,7 @@ $sizes: (
   xl: $xl,
   xxl: $xxl,
   xxxl: $xxxl,
+  xxxxl: $xxxxl,
 );
 
 :export {

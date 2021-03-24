@@ -1,7 +1,7 @@
 @import 'core';
 
 .wrapper {
-  background-color: $white;
+  background-color: transparent;
   border-radius: 2px;
   box-sizing: border-box;
   display: flex;
@@ -20,23 +20,20 @@
 
     &Content {
       align-items: center;
-      border: 1px solid $inputBorder;
-      border-radius: 2px;
+      background-color: $input;
       color: $text;
       display: flex;
       font-family: $primaryFont;
-      padding: 10px 12px;
+      padding: 12px;
       width: 100%;
 
       &Icon {
-        color: $primary;
-        height: 16px;
-        width: 16px;
+        color: $placeholder;
+        height: 20px;
+        width: 20px;
 
         &Before {
-          height: 12px;
           margin-right: 10px;
-          width: 12px;
         }
 
         &After {
@@ -48,7 +45,7 @@
         background-color: transparent;
         border: none;
         color: $black;
-        font-size: $m;
+        font-size: $l;
         width: 100%;
 
         &::placeholder {
@@ -70,7 +67,7 @@
     }
 
     &:focus-within {
-      outline: 1px solid $primary;
+      outline: 2px solid $primary;
     }
   }
 }

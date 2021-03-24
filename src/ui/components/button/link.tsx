@@ -38,7 +38,7 @@ export const SecondaryButtonLink: React.FC<LinkProps> = ({
 }: LinkProps) => (
   <Link className={cx(s.button, s.buttonSecondary, disabled && s.buttonDisabled, className)} {...props}>
     {icon && <Icon className={s.buttonPrimaryIcon} icon={icon} />}
-    <Text size={Text.sizes.m} color={Text.colors.primary} weight={Text.weights.semiBold}>
+    <Text color={Text.colors.white} size={Text.sizes.xl} weight={Text.weights.semiBold}>
       {children}
     </Text>
   </Link>

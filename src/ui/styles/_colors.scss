@@ -1,21 +1,23 @@
 //colors
 $text: #474747;
-$primary: #347964;
+$primary: #47a78a;
 $black: #2d2d2d;
 $white: #fff;
 $success: #4eb523;
 $error: #f44336;
-$background: #f7f7f7;
+$background: #ebf3f1;
 $switcher: #898989;
 $border: #e3e3e3;
+$input: #cee2dc;
 $inputBorder: #dedede;
 $tableBorder: #eaeaea;
-$placeholder: #ccc;
+$placeholder: #748581;
 $light-grey: #c8c8c8;
 $dark-grey: #919191;
 $terracotta: #ad1e00;
 $light-orange: #ffe9bf;
 $pink: #fff1ea;
+$darkGreen: #1c5040;
 $calculation-error: #ea8f00;
 
 $colors: (
@@ -37,6 +39,8 @@ $colors: (
   lightorange: $light-orange,
   pink: $pink,
   calculationerror: $calculation-error,
+  input: $input,
+  darkgreen: $darkGreen,
 );
 
 /* You can do `import colors from 'colors.scss'` in your js code to get variables in JSON format */

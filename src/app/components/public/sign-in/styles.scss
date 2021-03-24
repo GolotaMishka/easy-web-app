@@ -6,7 +6,32 @@
 
   &Left {
     background-color: $primary;
-    width: 50%;
+    padding: 40px;
+    width: 45%;
+
+    &Logo {
+      margin-bottom: 80px;
+      max-width: 92px;
+    }
+
+    &Content {
+      text-align: center;
+
+      &Title {
+        margin-bottom: 80px;
+      }
+
+      &Description {
+        letter-spacing: 1px;
+        line-height: 20px;
+        margin-bottom: 80px;
+      }
+
+      &Button {
+        display: flex;
+        justify-content: center;
+      }
+    }
   }
 
   &Right {
@@ -14,14 +39,25 @@
     background-color: $background;
     display: flex;
     justify-content: center;
-    width: 50%;
+    width: 55%;
 
     &Form {
-      width: 80%;
+      text-align: center;
+      width: 60%;
+
+      &Title {
+        margin-bottom: 40px;
+      }
 
       &Field {
         background-color: $background;
         margin-bottom: 20px;
+      }
+
+      &Button {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
       }
     }
   }

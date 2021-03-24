@@ -22,7 +22,7 @@ export const PrimaryButton: React.FC<ButtonProps> = ({
   // eslint-disable-next-line react/button-has-type
   <button type={type} className={cx(s.button, s.buttonPrimary, className)} disabled={disabled} {...props}>
     {icon && <Icon className={s.buttonPrimaryIcon} icon={icon} />}
-    <Text color={Text.colors.white} size={Text.sizes.m} weight={Text.weights.semiBold}>
+    <Text color={Text.colors.white} size={Text.sizes.xl} weight={Text.weights.semiBold}>
       {children}
     </Text>
   </button>
@@ -39,7 +39,7 @@ export const SecondaryButton: React.FC<ButtonProps> = ({
   // eslint-disable-next-line react/button-has-type
   <button type={type} className={cx(s.button, s.buttonSecondary, className)} disabled={disabled} {...props}>
     {icon && <Icon className={s.buttonSecondaryIcon} icon={icon} />}
-    <Text color={Text.colors.primary} size={Text.sizes.m} weight={Text.weights.semiBold}>
+    <Text color={Text.colors.white} size={Text.sizes.xl} weight={Text.weights.semiBold}>
       {children}
     </Text>
   </button>
