@@ -14,12 +14,13 @@
 
   input,
   button {
-    color: $white;
+    color: white;
     outline: none;
   }
 
   html,
   body {
+    color: white;
     font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: auto;
