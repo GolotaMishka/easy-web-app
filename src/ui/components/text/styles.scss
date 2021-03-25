@@ -5,8 +5,6 @@
 }
 
 .textColor {
-  color: $black;
-
   @each $key, $color in $colors {
     &__#{$key} {
       color: $color;
