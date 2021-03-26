@@ -1,6 +1,70 @@
 @import 'core';
 
 .page {
-  background-color: $placeholder;
-  height: 10000px;
+  background-color: $light;
+  border: 1px solid $border;
+  border-radius: 16px;
+  // height: 1000px;
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 32px;
+
+  &Form {
+    &Header {
+      align-items: center;
+      display: flex;
+      margin-bottom: 24px;
+
+      &Avatar {
+        align-items: center;
+        background-color: $background;
+        border-radius: 50%;
+        display: flex;
+        height: 128px;
+        justify-content: center;
+        width: 128px;
+
+        &Icon {
+          color: $dark-grey;
+          height: 84px;
+          width: 84px;
+        }
+      }
+
+      &User {
+        margin-bottom: 24px;
+        margin-left: 32px;
+
+        &Name {
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+    &Title {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    &Row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+
+      &Field {
+        width: 46%;
+
+        &Social {
+          width: 100%;
+        }
+      }
+    }
+
+    &Button {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
 }

@@ -20,6 +20,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
 
     &Logo {
       max-height: 44px;
@@ -96,6 +97,7 @@
       left: 0;
       position: fixed;
       width: $sidebar-width;
+      z-index: 10;
 
       &Item {
         align-items: center;

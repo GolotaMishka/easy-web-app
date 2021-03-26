@@ -11,7 +11,7 @@ import {
 } from 'app/constants/url';
 import Layout from 'app/components/core/layout';
 import ErrorBoundary from 'app/utils/error-boundary';
-// import AppContainer from './app';
+import ProfileContainer from './profile';
 
 const AppRoute = () => (
   <Layout>
@@ -22,7 +22,7 @@ const AppRoute = () => (
         <Route path={vacanciesPath} component={() => <div>vacanciesPath</div>} />
         <Route path={resumePath} component={() => <div>resumePath</div>} />
         <Route path={trajectoryPath} component={() => <div>trajectoryPath</div>} />
-        <Route path={profilePath} component={() => <div>profilePath</div>} />
+        <Route path={profilePath} component={ProfileContainer} />
         <Redirect from={appBasePath} to={knowledgePath} />
       </Switch>
     </ErrorBoundary>
