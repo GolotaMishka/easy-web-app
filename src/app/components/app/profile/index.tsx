@@ -2,8 +2,6 @@ import React, { ReactElement } from 'react';
 import { PrimaryButton, TextInput, Loader, Icon, Text, DatePicker } from 'ui';
 import { Form, FormikErrors, FormikValues } from 'formik';
 import { Field } from 'app/utils';
-import Logo from 'public/logo.svg';
-import { signUpPath } from 'app/constants/url';
 import s from './styles.scss';
 
 interface ProfileProps {
