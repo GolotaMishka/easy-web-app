@@ -4,6 +4,7 @@ import { signInPath, signUpPath } from 'app/constants/url';
 import s from './styles.scss';
 
 const Home = () => {
+  console.log(Text.colors.white, ' Text.colors.white');
   return (
     <div className={s.page}>
       <PrimaryButtonLink to={signUpPath}>Sign up</PrimaryButtonLink>
