@@ -1,0 +1,37 @@
+@import 'core';
+
+.item {
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  padding: 8px;
+  position: relative;
+  width: 100%;
+
+  &Icon {
+    margin-bottom: 10px;
+  }
+
+  ::after {
+    background-color: $primary;
+    border-radius: 4px 0 0 4px;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity 0.35s cubic-bezier(0.3, 0.1, 0.3, 1) 0s, transform 0.35s cubic-bezier(0.3, 0.1, 0.3, 1) 0s;
+    width: 3px;
+  }
+
+  &Active {
+    ::after {
+      opacity: 1;
+    }
+  }
+}

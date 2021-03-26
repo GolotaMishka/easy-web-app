@@ -32,6 +32,13 @@ import copyright from './icons/copyright.svg';
 import user from './icons/user.svg';
 import lock from './icons/lock.svg';
 import mail from './icons/mail.svg';
+import userCircle from './icons/userCircle.svg';
+import power from './icons/power.svg';
+import work from './icons/work.svg';
+import file from './icons/file.svg';
+import book from './icons/book.svg';
+import mic from './icons/mic.svg';
+import chart from './icons/chart.svg';
 
 export interface IconProps extends React.SVGAttributes<SVGElement> {
   icon: any;
@@ -90,4 +97,11 @@ Icon.icons = {
   lock,
   user,
   mail,
+  userCircle,
+  power,
+  work,
+  file,
+  book,
+  mic,
+  chart,
 };

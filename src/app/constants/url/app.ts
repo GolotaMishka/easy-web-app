@@ -10,4 +10,9 @@ export const signInPath: string = applyPublicUrl('sign-in');
 export const signUpPath: string = applyPublicUrl('sign-up');
 
 // private
-export const learningPath: string = applyBaseUrl('learning');
+export const knowledgePath: string = applyBaseUrl('knowledge');
+export const interviewPath: string = applyBaseUrl('interview');
+export const vacanciesPath: string = applyBaseUrl('vacancies');
+export const resumePath: string = applyBaseUrl('resume');
+export const trajectoryPath: string = applyBaseUrl('trajectory');
+export const profilePath: string = applyBaseUrl('profile');

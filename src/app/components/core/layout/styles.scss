@@ -1,0 +1,127 @@
+@import 'core';
+
+.layout {
+  background-color: $background;
+  // display: flex;
+  // flex-direction: column;
+  min-height: 100vh;
+  position: absolute;
+  width: 100%;
+
+  &Header {
+    align-items: center;
+    background-color: $light;
+    border-bottom: 1px solid $border;
+    box-sizing: border-box;
+    display: flex;
+    height: $header-height;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    &Logo {
+      max-height: 44px;
+    }
+
+    &Menu {
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      height: 100%;
+
+      &Icon {
+        align-items: center;
+        background-color: $background;
+        border-radius: 50%;
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        margin-right: 14px;
+        width: 40px;
+      }
+
+      &Arrow {
+        color: $switcher;
+        height: 14px;
+        margin-left: 14px;
+        width: 14px;
+
+        &Open {
+          transform: rotate(180deg);
+          transition: 0.5s;
+        }
+      }
+
+      &Content {
+        background-color: $light;
+        border: 1px solid $border;
+        border-radius: 8px;
+        padding: 0 16px;
+        position: absolute;
+        right: 0;
+        top: $header-height;
+        width: 200px;
+
+        &Item {
+          align-items: center;
+          border-bottom: 1px solid $border;
+          display: flex;
+          padding: 10px 0;
+          width: 100%;
+
+          &Icon {
+            margin-right: 10px;
+
+            &Logout {
+              color: $error;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &Main {
+    padding-left: $sidebar-width;
+    padding-top: $header-height;
+
+    &Sidebar {
+      background-color: $light;
+      border-right: 1px solid $border;
+      height: 100vh;
+      left: 0;
+      position: fixed;
+      width: $sidebar-width;
+
+      &Item {
+        align-items: center;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        margin-top: 8px;
+        padding: 8px;
+        width: 100%;
+
+        &Icon {
+          margin-bottom: 10px;
+        }
+
+        &Active {
+          border-right: 4px solid $primary;
+        }
+      }
+    }
+
+    &Content {
+      margin: 0 auto;
+      max-width: 1100px;
+      min-height: calc(100vh - #{$header-height});
+      padding: 40px 0;
+    }
+  }
+}

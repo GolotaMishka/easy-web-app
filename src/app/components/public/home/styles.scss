@@ -1,9 +1,14 @@
 @import 'core';
 
 .page {
-  padding: 34px 30px;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
 
-  &Title {
-    margin-bottom: 30px;
+  &Buttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
   }
 }

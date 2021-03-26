@@ -1,7 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import { publicPath, appBasePath } from 'app/constants/url/user';
+import { publicPath, appBasePath } from 'app/constants/url';
 import PublicRoute from './public';
 import AppRoute from './app';
 

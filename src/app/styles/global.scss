@@ -15,19 +15,15 @@
 
   input,
   button {
-    color: white;
     outline: none;
   }
 
   html,
   body {
-    color: white;
     font-family: 'IBM Plex Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: auto;
     overflow-x: hidden;
     width: 100%;
-
-    // @include font($s, $regular, $text);
   }
 }
