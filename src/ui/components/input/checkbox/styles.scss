@@ -22,7 +22,7 @@
     width: 14px;
 
     &Tick {
-      background-color: $white;
+      background-color: $light;
       border: 1px solid $inputBorder;
       border-radius: 1px;
       box-sizing: border-box;
@@ -34,7 +34,7 @@
       width: 14px;
 
       &Icon {
-        color: $white;
+        color: $light;
         height: 14px;
         opacity: 0;
         width: 9px;

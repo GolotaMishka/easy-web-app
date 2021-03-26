@@ -20,7 +20,7 @@ export const PrimaryButtonLink: React.FC<LinkProps> = ({
 }: LinkProps) => (
   <Link className={cx(s.button, s.buttonPrimary, disabled && s.buttonDisabled, className)} {...props}>
     {icon && <Icon className={s.buttonPrimaryIcon} icon={icon} />}
-    <Text size={Text.sizes.m} color={Text.colors.white} weight={Text.weights.semiBold}>
+    <Text size={Text.sizes.m} color={Text.colors.light} weight={Text.weights.semiBold}>
       {children}
     </Text>
   </Link>
@@ -38,7 +38,7 @@ export const SecondaryButtonLink: React.FC<LinkProps> = ({
 }: LinkProps) => (
   <Link className={cx(s.button, s.buttonSecondary, disabled && s.buttonDisabled, className)} {...props}>
     {icon && <Icon className={s.buttonPrimaryIcon} icon={icon} />}
-    <Text color={Text.colors.white} size={Text.sizes.xl} weight={Text.weights.semiBold}>
+    <Text color={Text.colors.light} size={Text.sizes.xl} weight={Text.weights.semiBold}>
       {children}
     </Text>
   </Link>

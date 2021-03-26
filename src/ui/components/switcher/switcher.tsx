@@ -16,7 +16,7 @@ export const Switcher: React.FC<SwitcherProps> = ({ id, checked, className, ...p
     <Text
       className={cx(s.switchTitle, checked && s.switchTitleChecked)}
       size={Text.sizes.s}
-      color={Text.colors.white}
+      color={Text.colors.light}
       weight={Text.weights.semiBold}
     >
       {checked ? 'Yes' : 'No'}

@@ -10,7 +10,7 @@ const Home = () => {
       <PrimaryButtonLink to={signUpPath}>Sign up</PrimaryButtonLink>
       <PrimaryButtonLink to={signInPath}>Sign in</PrimaryButtonLink>
       <div style={{ backgroundColor: 'red', width: '100px', height: '100px' }}>
-        <Text color={Text.colors.white}>aefsgrtbg</Text>
+        <Text color={Text.colors.light}>aefsgrtbg</Text>
       </div>
     </div>
   );

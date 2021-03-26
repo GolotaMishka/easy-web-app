@@ -242,7 +242,7 @@
   }
 
   .DayPickerInput-Overlay {
-    background: $white;
+    background: $light;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     left: 0;
     position: absolute;
@@ -254,7 +254,7 @@
   }
 
   .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside):not(.DayPicker-Day--today) {
-    color: $white;
+    color: $light;
   }
 
   .DayPicker-Day--start,
@@ -266,14 +266,14 @@
 
   .DayPicker-Day--today.DayPicker-Day--selected {
     background-color: $primary !important;
-    border: 1px solid $white !important;
+    border: 1px solid $light !important;
     box-shadow: 0 0 0 2px $primary;
-    color: $white;
+    color: $light;
     outline: none;
     position: relative;
 
     &::after {
-      background-color: $white;
+      background-color: $light;
       border-radius: 2px;
       content: '';
       height: 4px;

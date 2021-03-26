@@ -22,12 +22,12 @@ const SignIn: React.FC<SignInProps> = ({ isSubmitting, isValid, errors }: SignIn
             className={s.pageLeftContentTitle}
             size={Text.sizes.xxxxl}
             weight={Text.weights.semiBold}
-            color={Text.colors.white}
+            color={Text.colors.light}
           >
             Welcome Back!
           </Text>
           <div className={s.pageLeftContentDescription}>
-            <Text size={Text.sizes.xl} color={Text.colors.white}>
+            <Text size={Text.sizes.xl} color={Text.colors.light}>
               Still not with us? Create an <br /> account and start to learn{' '}
             </Text>
           </div>

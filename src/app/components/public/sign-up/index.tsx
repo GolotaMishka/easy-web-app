@@ -22,12 +22,12 @@ const SignUp: React.FC<SignUpProps> = ({ isSubmitting, isValid, errors }: SignUp
             className={s.pageLeftContentTitle}
             size={Text.sizes.xxxxl}
             weight={Text.weights.semiBold}
-            color={Text.colors.white}
+            color={Text.colors.light}
           >
             Welcome!
           </Text>
           <div className={s.pageLeftContentDescription}>
-            <Text size={Text.sizes.xl} color={Text.colors.white}>
+            <Text size={Text.sizes.xl} color={Text.colors.light}>
               To keep connected with us please <br /> login with your personal info{' '}
             </Text>
           </div>
