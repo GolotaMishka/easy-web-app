@@ -13,4 +13,4 @@ export const getExpiresIn = (state: RootState): string => getState(state).get('e
 
 export const getIsLoggedIn = (state: RootState): boolean => Boolean(getAccess(state));
 
-export const getUserDetail = (state: RootState): string => getState(state).get('userDetail');
+export const getUserDetail = (state: RootState): any => getState(state).get('userDetail');

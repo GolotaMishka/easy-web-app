@@ -14,14 +14,16 @@ import {
   appBasePath,
 } from 'app/constants/url';
 import { Link } from 'react-router-dom';
+import { IToken } from 'data';
 import s from './styles.scss';
 import NavLinkComponent from './navlink';
 
 interface LayoutProps {
   children: React.ReactNode;
+  userDetails: IToken;
 }
 
-const Layout = ({ children }: LayoutProps): ReactElement => {
+const Layout = ({ children, userDetails }: LayoutProps): ReactElement => {
   const menuRef = React.useRef(null);
   const toggleRef = React.useRef(null);
   const [isMenuOpen, setMenuOpen] = React.useState(false);
@@ -29,8 +31,8 @@ const Layout = ({ children }: LayoutProps): ReactElement => {
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
   const closeMenu = () => setMenuOpen(false);
-
   useOutsideClicker(menuRef, toggleRef, closeMenu);
+
   return (
     <div className={s.layout}>
       <header className={s.layoutHeader}>
@@ -41,7 +43,7 @@ const Layout = ({ children }: LayoutProps): ReactElement => {
           <div className={s.layoutHeaderMenuIcon}>
             <Icon icon={Icon.icons.userCircle} />
           </div>
-          <Text>Mykhailo Holota</Text>
+          <Text>{`${userDetails.firstName} ${userDetails.lastName}`}</Text>
           <Icon
             icon={Icon.icons.chevronDown}
             className={cx(s.layoutHeaderMenuArrow, isMenuOpen && s.layoutHeaderMenuArrowOpen)}

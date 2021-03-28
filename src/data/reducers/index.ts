@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import values from './values';
+import users from './users';
 import api from './api';
 import auth from './auth';
 
-export const entities = { values };
+export const entities = { users };
 
 const appReducers = combineReducers({
   api,

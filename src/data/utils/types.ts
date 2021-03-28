@@ -9,7 +9,9 @@ export interface ThunkExtraArguments {
   normalize: (...args: any) => any;
 }
 export interface IToken {
-  isMemberOf: string | string[];
+  userId: string;
+  firstName: string;
+  lastName: string;
   email: string;
 }
 

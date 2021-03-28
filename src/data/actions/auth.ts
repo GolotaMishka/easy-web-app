@@ -14,10 +14,10 @@ export const getInitialCredentials = () => (
   const tokenFromStorage = window.localStorage.getItem('auth');
   if (tokenFromStorage) {
     try {
-      const tokenData: IToken = jwtDecode(tokenFromStorage);
+      const { userId, firstName, lastName, email }: IToken = jwtDecode(tokenFromStorage);
       api?.setAuthorizationHeader(tokenFromStorage);
       const payload = {
-        userDetail: { email: tokenData.email },
+        userDetail: { userId, firstName, lastName, email },
         access: tokenFromStorage,
       };
 
@@ -43,11 +43,17 @@ export const signUp = (values: FormikValues, formikActions: FormikHelpers<Formik
   try {
     const res = await api?.post(`/auth/registration`, values);
     const token = res.headers['x-auth'];
+    const { userId, firstName, lastName, email }: IToken = jwtDecode(token);
     api?.setAuthorizationHeader(token);
+
+    const payload = {
+      userDetail: { userId, firstName, lastName, email },
+      access: token,
+    };
     localStorage.setItem('auth', token);
     dispatch({
       type: constants.SIGNUP_SUCCESS,
-      payload: res,
+      payload,
     });
     formikActions.setSubmitting(false);
 
@@ -73,11 +79,17 @@ export const signIn = (values: FormikValues, formikActions: FormikHelpers<Formik
   try {
     const res = await api?.post(`/auth/login`, values);
     const token = res.headers['x-auth'];
+    const { userId, firstName, lastName, email }: IToken = jwtDecode(token);
     api?.setAuthorizationHeader(token);
+
+    const payload = {
+      userDetail: { userId, firstName, lastName, email },
+      access: token,
+    };
     localStorage.setItem('auth', token);
     dispatch({
       type: constants.LOGIN_SUCCESS,
-      payload: res,
+      payload,
     });
     formikActions.setSubmitting(false);
 

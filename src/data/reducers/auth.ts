@@ -21,6 +21,8 @@ export default (state = initialState, action) => {
     case constants.SESSION_LOAD_START:
       return sessionLoading.setLoading(state);
     case constants.SESSION_LOADED:
+    case constants.LOGIN_SUCCESS:
+    case constants.SIGNUP_SUCCESS:
       return sessionLoaded(state, action, sessionLoading);
     case constants.SESSION_LOAD_FAILED:
       return sessionLoading.setLoadFailed(state);

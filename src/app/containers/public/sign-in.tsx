@@ -7,7 +7,7 @@ import { useHistory } from 'react-router-dom';
 import { appBasePath } from 'app/constants/url';
 
 const mapDispatchToProps = {
-  signUp: actions.auth.signUp,
+  signIn: actions.auth.signIn,
 };
 
 export interface SignInProps {

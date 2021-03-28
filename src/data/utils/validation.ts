@@ -20,3 +20,14 @@ export const SignUp = Yup.object().shape({
     .max(16, 'Too Long')
     .required('Required'),
 });
+
+export const Profile = Yup.object().shape({
+  firstName: Yup.string().required('Required'),
+  lastName: Yup.string().required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+  // phoneNumber: Yup.string(),
+  // birthDate: Yup.date(),
+  // urlToLinkedIn: Yup.string(),
+  // djinni: Yup.string(),
+  // behance: Yup.string(),
+});

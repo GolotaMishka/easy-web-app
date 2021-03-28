@@ -1,3 +1,3 @@
 import { schema } from 'normalizr';
 
-export const value = new schema.Entity('values');
+export const user = new schema.Entity('users');

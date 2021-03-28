@@ -1,3 +1,3 @@
 export * as api from './api';
-export * as values from './values';
+export * as users from './users';
 export * as auth from './auth';

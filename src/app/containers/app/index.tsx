@@ -13,16 +13,19 @@ import {
 import Layout from 'app/components/core/layout';
 import ErrorBoundary from 'app/utils/error-boundary';
 import TrajectoryComponent from 'app/components/app/trajectory';
-import { selectors } from 'data';
+import { selectors, IToken } from 'data';
 import { connect } from 'react-redux';
 import ProfileContainer from './profile';
 
 export interface AppRouteProps {
   isLoggedIn: boolean;
+  userDetails: IToken;
 }
 
 const mapStateToProps = (state) => ({
   isLoggedIn: selectors.auth.getIsLoggedIn(state),
+  userDetails: selectors.auth.getUserDetail(state),
+
   // profileLoaded: selectors.auth.getProfileLoaded(state),
   // isAccessDenied: selectors.auth.getAccessDenied(state),
   // partiallyLoggedIn: selectors.auth.getPartiallyLoggedIn(state),
@@ -35,12 +38,12 @@ const mapDispatchToProps = {
   // loginLocally: actions.auth.loginLocally,
 };
 
-const AppRoute = ({ isLoggedIn }: AppRouteProps): ReactElement => {
+const AppRoute = ({ isLoggedIn, userDetails }: AppRouteProps): ReactElement => {
   if (!isLoggedIn) {
     return <Redirect to={publicPath} />;
   }
   return (
-    <Layout>
+    <Layout userDetails={userDetails}>
       <ErrorBoundary>
         <Switch>
           <Route path={knowledgePath} component={() => <div>knowledgePath</div>} />
@@ -56,4 +59,4 @@ const AppRoute = ({ isLoggedIn }: AppRouteProps): ReactElement => {
   );
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppRoute);
+export default connect<any, any>(mapStateToProps, mapDispatchToProps)(AppRoute);

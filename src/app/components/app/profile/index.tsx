@@ -8,9 +8,10 @@ interface ProfileProps {
   isSubmitting: boolean;
   isValid: boolean;
   errors: FormikErrors<FormikValues>;
+  profile: any;
 }
 
-const Profile = ({ isSubmitting, isValid, errors }: ProfileProps): ReactElement => {
+const Profile = ({ isSubmitting, isValid, errors, profile }: ProfileProps): ReactElement => {
   return (
     <div className={s.page}>
       {!isSubmitting ? (
@@ -21,11 +22,11 @@ const Profile = ({ isSubmitting, isValid, errors }: ProfileProps): ReactElement 
             </div>
             <div className={s.pageFormHeaderUser}>
               <Text className={s.pageFormHeaderUserName} size={Text.sizes.l} weight={Text.weights.semiBold}>
-                Mykhailo Holota
+                {`${profile.get('firstName')} ${profile.get('lastName')}`}
               </Text>
               <div className={s.pageFormHeaderUserEmail}>
                 <Text size={Text.sizes.m} color={Text.colors.placeholder} weight={Text.weights.semiBold}>
-                  golotamm@gmail.com
+                  {profile.get('email')}
                 </Text>
               </div>
             </div>
@@ -53,7 +54,7 @@ const Profile = ({ isSubmitting, isValid, errors }: ProfileProps): ReactElement 
           </div>
           <div className={s.pageFormRow}>
             <div className={s.pageFormRowField}>
-              <Field component={DatePicker} id="birthday" name="birthday" placeholder="Birthday" />
+              <Field component={DatePicker} id="birthDate" name="birthDate" placeholder="Birthday" />
             </div>
 
             <Field
@@ -74,8 +75,8 @@ const Profile = ({ isSubmitting, isValid, errors }: ProfileProps): ReactElement 
             <Field
               className={s.pageFormRowFieldSocial}
               component={TextInput}
-              id="linkedIn"
-              name="linkedIn"
+              id="urlToLinkedIn"
+              name="urlToLinkedIn"
               placeholder="LinkedIn"
             />
           </div>
