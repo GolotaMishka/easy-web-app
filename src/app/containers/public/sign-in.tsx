@@ -1,16 +1,26 @@
-import React from 'react';
-import { Formik } from 'formik';
+import React, { ReactElement } from 'react';
 import SignIn from 'app/components/public/sign-in';
-import { validationSchemas } from 'data';
-// export interface SignInContainerProps {
-//   close: () => void;
-//   create: (clientId: string, values: FormikValues, formikActions: FormikHelpers<FormikValues>) => boolean;
-//   clientId: string;
-// }
+import { validationSchemas, actions } from 'data';
+import { connect } from 'react-redux';
+import { Formik, FormikValues, FormikHelpers } from 'formik';
+import { useHistory } from 'react-router-dom';
+import { appBasePath } from 'app/constants/url';
 
-const SignInContainer: React.FC = () => {
-  const onSubmit = async (values) => {
-    console.log(values);
+const mapDispatchToProps = {
+  signUp: actions.auth.signUp,
+};
+
+export interface SignInProps {
+  signIn: (values: FormikValues, formikActions: FormikHelpers<FormikValues>) => boolean;
+}
+
+const SignInContainer = ({ signIn }: SignInProps): ReactElement => {
+  const history = useHistory();
+
+  const onSubmit = async (values, formikActions) => {
+    if (await signIn(values, formikActions)) {
+      history.push(appBasePath);
+    }
   };
   return (
     <Formik validationSchema={validationSchemas.SignIn} initialValues={{}} onSubmit={onSubmit}>
@@ -19,4 +29,4 @@ const SignInContainer: React.FC = () => {
   );
 };
 
-export default SignInContainer;
+export default connect<SignInProps>(null, mapDispatchToProps)(SignInContainer);

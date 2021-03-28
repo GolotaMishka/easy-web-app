@@ -1,4 +1,4 @@
-const prefix = (type: string): string => `fire/api/${type}`;
+const prefix = (type: string): string => `easy-web/api/${type}`;
 
 export const UNAUTHORIZED: string = prefix('UNAUTHORIZED');
 export const SERVER_ERROR: string = prefix('SERVER_ERROR');
