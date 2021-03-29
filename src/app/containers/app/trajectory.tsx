@@ -12,7 +12,7 @@ export interface TrajectoryContainerProps {
   list: any;
   clear: () => void;
   fetchList: () => boolean;
-  updateTask: (values: FormikValues) => boolean;
+  updateTask: (id: string, values: FormikValues) => boolean;
 }
 
 const mapStateToProps = (state) => ({

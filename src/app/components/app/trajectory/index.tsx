@@ -6,7 +6,7 @@ import s from './styles.scss';
 
 interface TrajectoryProps {
   workDays: any;
-  updateTask: (values: FormikValues) => boolean;
+  updateTask: (id: string, values: FormikValues) => boolean;
   values: any;
 }
 
