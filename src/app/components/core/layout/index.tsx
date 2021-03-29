@@ -68,10 +68,10 @@ const Layout = ({ children, userDetails }: LayoutProps): ReactElement => {
       <div className={s.layoutMain}>
         <aside className={s.layoutMainSidebar}>
           <NavLinkComponent icon={Icon.icons.book} title="Knowledge" path={knowledgePath} />
+          <NavLinkComponent icon={Icon.icons.chart} title="Trajectory" path={trajectoryPath} />
           <NavLinkComponent icon={Icon.icons.mic} title="Interview" path={interviewPath} />
           <NavLinkComponent icon={Icon.icons.work} title="Vacancies" path={vacanciesPath} />
           <NavLinkComponent icon={Icon.icons.file} title="Resume" path={resumePath} />
-          <NavLinkComponent icon={Icon.icons.chart} title="Trajectory" path={trajectoryPath} />
         </aside>
         <div className={s.layoutMainContent}>{children}</div>
       </div>

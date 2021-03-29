@@ -1,0 +1,56 @@
+@import 'core';
+
+.box {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  outline: none;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+
+  &Header {
+    align-items: center;
+    background-color: $light;
+    border: 1px solid $border;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 15px;
+
+    &Button {
+      padding: 0 !important;
+    }
+
+    &Left {
+      align-items: center;
+      display: flex;
+      width: 95%;
+
+      &Title {
+        margin-right: 16px;
+      }
+    }
+
+    &ClosedBtn {
+      color: $switcher;
+      transition: 0.5s;
+    }
+
+    &OpenedBtn {
+      color: $switcher;
+      transform: rotate(180deg);
+      transition: 0.5s;
+    }
+  }
+
+  &Content {
+    background-color: $background;
+    padding: 15px;
+
+    &Description {
+      line-height: 16px !important;
+    }
+  }
+}

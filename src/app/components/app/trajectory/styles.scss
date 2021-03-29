@@ -1,6 +1,10 @@
 @import 'core';
 
 .page {
-  background-color: $placeholder;
-  height: 10000px;
+  margin: 0 auto;
+  max-width: 768px;
+
+  &Day {
+    margin-bottom: 20px;
+  }
 }

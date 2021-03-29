@@ -15,3 +15,4 @@ export * from './components/status-bar';
 export * from './components/agreement-card';
 export * from './components/loader';
 export * from './components/footer';
+export * from './components/dropdown';

@@ -12,10 +12,10 @@ import {
 } from 'app/constants/url';
 import Layout from 'app/components/core/layout';
 import ErrorBoundary from 'app/utils/error-boundary';
-import TrajectoryComponent from 'app/components/app/trajectory';
 import { selectors, IToken } from 'data';
 import { connect } from 'react-redux';
 import ProfileContainer from './profile';
+import TrajectoryContainer from './trajectory';
 
 export interface AppRouteProps {
   isLoggedIn: boolean;
@@ -50,7 +50,7 @@ const AppRoute = ({ isLoggedIn, userDetails }: AppRouteProps): ReactElement => {
           <Route path={interviewPath} component={() => <div>interviewPath</div>} />
           <Route path={vacanciesPath} component={() => <div>vacanciesPath</div>} />
           <Route path={resumePath} component={() => <div>resumePath</div>} />
-          <Route path={trajectoryPath} component={TrajectoryComponent} />
+          <Route path={trajectoryPath} component={TrajectoryContainer} />
           <Route path={profilePath} component={ProfileContainer} />
           <Redirect from={appBasePath} to={knowledgePath} />
         </Switch>
