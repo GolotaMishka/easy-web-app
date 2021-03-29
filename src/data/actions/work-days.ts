@@ -1,4 +1,5 @@
 import { Dispatch } from 'redux';
+import { FormikValues, FormikHelpers } from 'formik';
 import * as constants from '../constants/work-days';
 // import * as authSelectors from '../selectors/auth';
 
@@ -27,6 +28,30 @@ export const fetchList = () => async (
   } catch (e) {
     console.error(e);
     dispatch({ type: constants.LIST_LOAD_FAILED });
+    return false;
+  }
+};
+
+export const updateTask = (workDayId: string, values: FormikValues) => async (
+  dispatch: Dispatch,
+  _: () => RootState,
+  { api }: ThunkExtraArguments,
+): Promise<boolean> => {
+  dispatch({ type: constants.UPDATE_TASK_START });
+
+  try {
+    const res = await api?.patch(`/tasks/${values.id}`, values);
+
+    dispatch({
+      type: constants.UPDATE_TASK_SUCCESS,
+      payload: { task: res.data, workDayId },
+    });
+
+    return true;
+  } catch (e) {
+    console.error(e);
+    dispatch({ type: constants.UPDATE_TASK_FAILED });
+
     return false;
   }
 };

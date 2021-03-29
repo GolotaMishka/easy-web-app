@@ -20,8 +20,8 @@ const Dropdown = ({ className, title, children }: DropdownProps): ReactElement =
   };
 
   return (
-    <div>
-      <button type="button" className={cx(s.box, className)} onClick={toggleOpened}>
+    <div className={className}>
+      <button type="button" className={s.box} onClick={toggleOpened}>
         <div className={s.boxHeader}>
           <div className={s.boxHeaderLeft}>
             <Text className={s.boxHeaderLeftTitle} size={Text.sizes.l} weight={Text.weights.semiBold}>
