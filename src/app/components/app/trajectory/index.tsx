@@ -17,6 +17,10 @@ enum TaskStatus {
   success = 'success',
   failed = 'failed',
 }
+const createMarkup = (content) => {
+  return { __html: content };
+};
+
 const defineTaskStatus = (status) => {
   switch (status) {
     case TaskStatus.success:
@@ -63,33 +67,34 @@ const Trajectory = ({ workDays, values, updateSeveralTasks }: TrajectoryProps): 
           className={s.pageDay}
         >
           {workDay.get('tasks').map((task, index) => (
-            <div key={task.get('id')}>
-              <div className={s.pageDayTask}>
-                <div className={s.pageDayTaskDescription}>
-                  <div className={s.pageDayTaskDescriptionIcon}>
-                    <Icon icon={Icon.icons.paper} className={s.pageDayTaskDescriptionIconContent} />
-                  </div>
-                  <Text>{task.get('description')}</Text>
+            <div className={s.pageDayTask} key={task.get('id')}>
+              <div className={s.pageDayTaskDescription}>
+                <div className={s.pageDayTaskDescriptionIcon}>
+                  <Icon icon={Icon.icons.paper} className={s.pageDayTaskDescriptionIconContent} />
                 </div>
-
-                <div className={s.pageDayTaskDescriptionAnswer}>
-                  <Field
-                    className={cx(s.pageDayTaskDescriptionAnswer, defineTaskStatus(task.get('status')))}
-                    component={TextInput}
-                    id={`[${workDayIndex}].tasks[${index}.answer]`}
-                    name={`[${workDayIndex}].tasks[${index}.answer]`}
-                    placeholder="Paste link to the code"
-                    iconBefore={Icon.icons.check}
-                  />
-                </div>
+                <div
+                  className={s.pageDayTaskDescriptionText}
+                  dangerouslySetInnerHTML={createMarkup(task.get('description'))}
+                />
               </div>
-              <div className={s.pageDayButtons}>
-                <SecondaryButton type="button" onClick={() => updateSeveralTasks(values[workDayIndex])}>
-                  Save
-                </SecondaryButton>
+
+              <div className={s.pageDayTaskDescriptionAnswer}>
+                <Field
+                  className={cx(s.pageDayTaskDescriptionAnswer, defineTaskStatus(task.get('status')))}
+                  component={TextInput}
+                  id={`[${workDayIndex}].tasks[${index}.answer]`}
+                  name={`[${workDayIndex}].tasks[${index}.answer]`}
+                  placeholder="Paste link to the code"
+                  iconBefore={Icon.icons.check}
+                />
               </div>
             </div>
           ))}
+          <div className={s.pageDayButtons}>
+            <SecondaryButton type="button" onClick={() => updateSeveralTasks(values[workDayIndex])}>
+              Save
+            </SecondaryButton>
+          </div>
         </Dropdown>
       ))}
     </Form>
