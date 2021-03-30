@@ -8,23 +8,23 @@ import { Formik, FormikValues } from 'formik';
 export interface TrajectoryContainerProps {
   isListLoaded: boolean;
   isListLoading: boolean;
-  isTaskUpdating: boolean;
+  areTasksUpdating: boolean;
   list: any;
   clear: () => void;
   fetchList: () => boolean;
-  updateTask: (id: string, values: FormikValues) => boolean;
+  updateSeveralTasks: (values: FormikValues) => boolean;
 }
 
 const mapStateToProps = (state) => ({
   list: selectors.workDays.getItemsList(state),
   isListLoaded: selectors.workDays.getItemsListLoaded(state),
   isListLoading: selectors.workDays.getItemsListLoading(state),
-  isTaskUpdating: selectors.workDays.getTaskUpdating(state),
+  areTasksUpdating: selectors.workDays.getSeveralTasksUpdating(state),
 });
 const mapDispatchToProps = {
   fetchList: actions.workDays.fetchList,
   clear: actions.workDays.clear,
-  updateTask: actions.workDays.updateTask,
+  updateSeveralTasks: actions.workDays.updateSeveralTasks,
 };
 
 const TrajectoryContainer = ({
@@ -32,8 +32,8 @@ const TrajectoryContainer = ({
   list,
   isListLoading,
   isListLoaded,
-  updateTask,
-  isTaskUpdating,
+  updateSeveralTasks,
+  areTasksUpdating,
 }: TrajectoryContainerProps): ReactElement => {
   const initialValues = React.useMemo(() => (list?.size ? { ...list?.toJS() } : {}), [list]);
 
@@ -43,10 +43,12 @@ const TrajectoryContainer = ({
     }
   }, [isListLoaded, isListLoading]);
 
-  if (!isListLoaded || isListLoading || isTaskUpdating) return <Loader />;
+  if (!isListLoaded || isListLoading || areTasksUpdating) return <Loader />;
   return (
     <Formik initialValues={initialValues} onSubmit={(values) => console.log(values)}>
-      {(formikProps) => <TrajectoryComponent workDays={list} updateTask={updateTask} {...formikProps} />}
+      {(formikProps) => (
+        <TrajectoryComponent workDays={list} updateSeveralTasks={updateSeveralTasks} {...formikProps} />
+      )}
     </Formik>
   );
 };

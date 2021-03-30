@@ -8,4 +8,8 @@ export const UPDATE_TASK_START: string = prefix('UPDATE_TASK_START');
 export const UPDATE_TASK_SUCCESS: string = prefix('UPDATE_TASK_SUCCESS');
 export const UPDATE_TASK_FAILED: string = prefix('UPDATE_TASK_FAILED');
 
+export const UPDATE_SEVERAL_TASKS_START: string = prefix('UPDATE_SEVERAL_TASKS_START');
+export const UPDATE_SEVERAL_TASKS_SUCCESS: string = prefix('UPDATE_SEVERAL_TASKS_SUCCESS');
+export const UPDATE_SEVERAL_TASKS_FAILED: string = prefix('UPDATE_SEVERAL_TASKS_FAILED');
+
 export const CLEAR: string = prefix('CLEAR');

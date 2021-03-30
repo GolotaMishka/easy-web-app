@@ -39,6 +39,8 @@ import file from './icons/file.svg';
 import book from './icons/book.svg';
 import mic from './icons/mic.svg';
 import chart from './icons/chart.svg';
+import checked from './icons/checked.svg';
+import paper from './icons/paper.svg';
 
 export interface IconProps extends React.SVGAttributes<SVGElement> {
   icon: any;
@@ -104,4 +106,6 @@ Icon.icons = {
   book,
   mic,
   chart,
+  checked,
+  paper,
 };

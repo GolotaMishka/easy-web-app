@@ -56,4 +56,34 @@ export const updateTask = (workDayId: string, values: FormikValues) => async (
   }
 };
 
+export const updateSeveralTasks = (values: FormikValues) => async (
+  dispatch: any,
+  _: () => RootState,
+  { api }: ThunkExtraArguments,
+): Promise<boolean> => {
+  dispatch({ type: constants.UPDATE_SEVERAL_TASKS_START });
+  console.log(values, '  values');
+  try {
+    const requests = values.tasks.map(async (task) => {
+      if (task) {
+        const request = await dispatch(updateTask(values.id, task));
+        return request;
+      }
+      return null;
+    });
+
+    await Promise.all(requests);
+
+    dispatch({
+      type: constants.UPDATE_SEVERAL_TASKS_SUCCESS,
+    });
+    return true;
+  } catch (e) {
+    console.error(e);
+    dispatch({ type: constants.UPDATE_SEVERAL_TASKS_FAILED });
+
+    return false;
+  }
+};
+
 export const clear = () => ({ type: constants.CLEAR });

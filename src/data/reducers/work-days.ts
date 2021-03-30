@@ -4,6 +4,7 @@ import LoadingProgress from '../utils/reducers/loading';
 
 export const listLoadingProgress = new LoadingProgress('workDaysList');
 export const taskUpdationProgress = new LoadingProgress('taskUpdation');
+export const severalTaskUpdationProgress = new LoadingProgress('severalTaskUpdation');
 
 const mergeData = (state, payload) => {
   return state.withMutations((newState) => {
@@ -55,6 +56,13 @@ export default (state = initialState, action) => {
       return taskUpdationProgress.setLoadFailed(state);
     case constants.UPDATE_TASK_SUCCESS:
       return updateTask(state, action);
+
+    case constants.UPDATE_SEVERAL_TASKS_START:
+      return severalTaskUpdationProgress.setLoading(state);
+    case constants.UPDATE_SEVERAL_TASKS_FAILED:
+      return severalTaskUpdationProgress.setLoadFailed(state);
+    case constants.UPDATE_SEVERAL_TASKS_SUCCESS:
+      return severalTaskUpdationProgress.setLoaded(state);
 
     case constants.CLEAR:
       return initialState;

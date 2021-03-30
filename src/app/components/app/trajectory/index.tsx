@@ -2,11 +2,12 @@ import React, { ReactElement } from 'react';
 import { shortDate, Field } from 'app/utils';
 import { Dropdown, Text, TextInput, Icon, SecondaryButton } from 'ui';
 import { Form, FormikValues } from 'formik';
+import cx from 'classnames';
 import s from './styles.scss';
 
 interface TrajectoryProps {
   workDays: any;
-  updateTask: (id: string, values: FormikValues) => boolean;
+  updateSeveralTasks: (values: FormikValues) => boolean;
   values: any;
 }
 
@@ -19,46 +20,74 @@ enum TaskStatus {
 const defineTaskStatus = (status) => {
   switch (status) {
     case TaskStatus.success:
-      return s.pageDayTaskDescriptionStatusSuccess;
+      return s.pageDayTaskDescriptionAnswerStatusSuccess;
     case TaskStatus.progress:
-      return s.pageDayTaskDescriptionStatusProgress;
+      return s.pageDayTaskDescriptionAnswerStatusProgress;
     case TaskStatus.failed:
-      return s.pageDayTaskDescriptionStatusFailed;
+      return s.pageDayTaskDescriptionAnswerStatusFailed;
     default:
-      return s.pageDayTaskDescriptionStatusPending;
+      return s.pageDayTaskDescriptionAnswerStatusPending;
   }
 };
 
-const Trajectory = ({ workDays, values, updateTask }: TrajectoryProps): ReactElement => {
+const Trajectory = ({ workDays, values, updateSeveralTasks }: TrajectoryProps): ReactElement => {
   return (
     <Form className={s.page}>
       {workDays.map((workDay, workDayIndex) => (
-        <Dropdown key={workDay.get('id')} title={shortDate(workDay.get('date'))} className={s.pageDay}>
-          {workDay.get('tasks').map((task, index) => (
-            <div key={task.get('id')} className={s.pageDayTask}>
-              <div className={s.pageDayTaskDescription}>
-                <div className={s.pageDayTaskDescriptionTitle}>
-                  <Text>{`${index + 1}. `}</Text>
-                  <Icon icon={Icon.icons.check} className={defineTaskStatus(task.get('status'))} />
-                </div>
-                <Text>{task.get('description')}</Text>
-              </div>
+        <Dropdown
+          key={workDay.get('id')}
+          header={
+            <div className={s.pageHeader}>
+              <div className={s.pageHeaderTitles}>
+                <Icon icon={Icon.icons.checked} className={cx(s.pageHeaderTitlesIcon)} />
 
-              <div className={s.pageDayTaskDescriptionAnswer}>
-                <Field
-                  className={s.pageDayTaskDescriptionAnswer}
-                  component={TextInput}
-                  id={`[${workDayIndex}].tasks[${index}.answer]`}
-                  name={`[${workDayIndex}].tasks[${index}.answer]`}
-                  placeholder="Paste link to the code"
-                />
+                <Text
+                  className={s.boxHeaderLeftTitle}
+                  size={Text.sizes.xl}
+                  weight={Text.weights.semiBold}
+                  color={Text.colors.dark}
+                >
+                  Lets check your knowledge!
+                </Text>
               </div>
-              <SecondaryButton
-                type="button"
-                onClick={() => updateTask(workDay.get('id'), values[workDayIndex].tasks[index])}
+              <Text
+                className={s.boxHeaderLeftTitle}
+                size={Text.sizes.xl}
+                weight={Text.weights.semiBold}
+                color={Text.colors.dark}
               >
-                Save
-              </SecondaryButton>
+                {shortDate(workDay.get('date'))}
+              </Text>
+            </div>
+          }
+          className={s.pageDay}
+        >
+          {workDay.get('tasks').map((task, index) => (
+            <div key={task.get('id')}>
+              <div className={s.pageDayTask}>
+                <div className={s.pageDayTaskDescription}>
+                  <div className={s.pageDayTaskDescriptionIcon}>
+                    <Icon icon={Icon.icons.paper} className={s.pageDayTaskDescriptionIconContent} />
+                  </div>
+                  <Text>{task.get('description')}</Text>
+                </div>
+
+                <div className={s.pageDayTaskDescriptionAnswer}>
+                  <Field
+                    className={cx(s.pageDayTaskDescriptionAnswer, defineTaskStatus(task.get('status')))}
+                    component={TextInput}
+                    id={`[${workDayIndex}].tasks[${index}.answer]`}
+                    name={`[${workDayIndex}].tasks[${index}.answer]`}
+                    placeholder="Paste link to the code"
+                    iconBefore={Icon.icons.check}
+                  />
+                </div>
+              </div>
+              <div className={s.pageDayButtons}>
+                <SecondaryButton type="button" onClick={() => updateSeveralTasks(values[workDayIndex])}>
+                  Save
+                </SecondaryButton>
+              </div>
             </div>
           ))}
         </Dropdown>
