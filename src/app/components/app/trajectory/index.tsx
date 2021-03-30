@@ -47,7 +47,7 @@ const Trajectory = ({ workDays, values, updateSeveralTasks }: TrajectoryProps): 
                   weight={Text.weights.semiBold}
                   color={Text.colors.dark}
                 >
-                  Lets check your knowledge!
+                  Lets check your knowledge !
                 </Text>
               </div>
               <Text
