@@ -1,6 +1,43 @@
 @import 'core';
 
 .page {
-  background-color: $placeholder;
-  height: 10000px;
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 0 20px;
+
+  &Header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+
+    &Title {
+      margin-right: 20px;
+    }
+
+    &Tabs {
+      align-items: center;
+      background-color: $input;
+      border-radius: 10px;
+      display: flex;
+
+      &Tab {
+        background-color: transparent;
+        border: none;
+        border-radius: 10px;
+        color: $text;
+        cursor: pointer;
+        font-weight: 600;
+        padding: 15px;
+
+        &Active {
+          background-color: $primary;
+          color: $light !important;
+        }
+      }
+    }
+  }
+
+  &Content {
+    width: 100%;
+  }
 }

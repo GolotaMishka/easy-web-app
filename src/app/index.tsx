@@ -16,7 +16,6 @@ import history from './history';
 const { store } = createStore();
 const rootElement: HTMLElement = document.getElementById('root') as HTMLElement;
 (store.dispatch as ThunkDispatch<RootState, ThunkExtraArguments, AnyAction>)(actions.auth.getInitialCredentials());
-console.log(process.env.NODE_ENV, ' process.env.PROJECT_ENV');
 const App = () => (
   <Provider store={store}>
     <Router history={history}>

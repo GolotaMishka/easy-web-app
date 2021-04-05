@@ -1,0 +1,10 @@
+@import 'core';
+
+.block {
+  background-color: $light;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 20px;
+  width: 100%;
+}

@@ -11,6 +11,7 @@ export const signUpPath: string = applyPublicUrl('sign-up');
 
 // private
 export const knowledgePath: string = applyBaseUrl('knowledge');
+export const knowledgePathDetail = (topicIndex: string | number): string => `${knowledgePath}/${topicIndex}`;
 export const interviewPath: string = applyBaseUrl('interview');
 export const vacanciesPath: string = applyBaseUrl('vacancies');
 export const resumePath: string = applyBaseUrl('resume');

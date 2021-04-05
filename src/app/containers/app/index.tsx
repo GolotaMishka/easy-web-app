@@ -16,6 +16,7 @@ import { selectors, IToken } from 'data';
 import { connect } from 'react-redux';
 import ProfileContainer from './profile';
 import TrajectoryContainer from './trajectory';
+import KnowledgeContainer from './knowledge';
 
 export interface AppRouteProps {
   isLoggedIn: boolean;
@@ -46,7 +47,7 @@ const AppRoute = ({ isLoggedIn, userDetails }: AppRouteProps): ReactElement => {
     <Layout userDetails={userDetails}>
       <ErrorBoundary>
         <Switch>
-          <Route path={knowledgePath} component={() => <div>knowledgePath</div>} />
+          <Route path={knowledgePath} component={KnowledgeContainer} />
           <Route path={interviewPath} component={() => <div>interviewPath</div>} />
           <Route path={vacanciesPath} component={() => <div>vacanciesPath</div>} />
           <Route path={resumePath} component={() => <div>resumePath</div>} />
