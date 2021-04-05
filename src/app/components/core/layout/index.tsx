@@ -9,7 +9,6 @@ import {
   vacanciesPath,
   resumePath,
   trajectoryPath,
-  homePath,
   profilePath,
   appBasePath,
 } from 'app/constants/url';
