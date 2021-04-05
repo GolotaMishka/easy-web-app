@@ -69,10 +69,17 @@
 
         &Item {
           align-items: center;
+          background-color: transparent;
+          border: none;
           border-bottom: 1px solid $border;
+          cursor: pointer;
           display: flex;
           padding: 10px 0;
           width: 100%;
+
+          &:last-of-type {
+            border-bottom: none;
+          }
 
           &Icon {
             margin-right: 10px;

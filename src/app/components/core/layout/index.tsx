@@ -55,13 +55,20 @@ const Layout = ({ children, userDetails }: LayoutProps): ReactElement => {
               <Icon className={s.layoutHeaderMenuContentItemIcon} icon={Icon.icons.user} />
               <Text>Profile</Text>
             </Link>
-            <Link to={homePath} className={s.layoutHeaderMenuContentItem}>
+            <button
+              type="button"
+              onClick={() => {
+                window.localStorage.clear();
+                window.location.reload();
+              }}
+              className={s.layoutHeaderMenuContentItem}
+            >
               <Icon
                 className={cx(s.layoutHeaderMenuContentItemIcon, s.layoutHeaderMenuContentItemIconLogout)}
                 icon={Icon.icons.power}
               />
               <Text>Log out</Text>
-            </Link>
+            </button>
           </div>
         )}
       </header>
