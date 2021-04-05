@@ -12,8 +12,8 @@ paths.outputPath = path.join(paths.root, 'dist');
 paths.entryPoint = path.join(paths.app, 'index.tsx');
 paths.scss = path.join(paths.app, 'styles');
 paths.publicFiles = path.join(paths.root, 'public');
-paths.appConfig = path.join(paths.src, 'config', `${process.env.PROJECT_ENV || 'development'}.js`);
-paths.dataConfig = path.join(paths.data, 'config', `${`${process.env.PROJECT_ENV || 'development'}.ts`}`);
+paths.appConfig = path.join(paths.src, 'config', `${process.env.NODE_ENV || 'development'}.js`);
+paths.dataConfig = path.join(paths.data, 'config', `${`${process.env.NODE_ENV || 'development'}.ts`}`);
 paths.storybook = path.join(paths.ui, 'stories');
 
 module.exports = paths;
