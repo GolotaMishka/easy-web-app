@@ -5,9 +5,9 @@ import { Icon, Text } from 'ui';
 import cx from 'classnames';
 import {
   knowledgePath,
-  interviewPath,
-  vacanciesPath,
-  resumePath,
+  // interviewPath,
+  // vacanciesPath,
+  // resumePath,
   trajectoryPath,
   profilePath,
   appBasePath,
