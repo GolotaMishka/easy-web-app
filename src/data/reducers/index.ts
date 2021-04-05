@@ -3,9 +3,9 @@ import { combineReducers } from 'redux';
 import users from './users';
 import api from './api';
 import auth from './auth';
-import workDays from './work-days';
+import tasks from './tasks';
 
-export const entities = { users, workDays };
+export const entities = { users, tasks };
 
 const appReducers = combineReducers({
   api,

@@ -2,20 +2,20 @@ import { Map } from 'immutable';
 import { denormalize } from 'normalizr';
 import * as schemas from '../utils/schemas';
 
-import { listLoadingProgress, taskUpdationProgress, severalTaskUpdationProgress } from '../reducers/work-days';
+import { listLoadingProgress, severalTaskUpdationProgress, taskUpdationProgress } from '../reducers/tasks';
 import { RootState } from '../reducers';
 
-const getState = (store: RootState) => store.workDays;
+const getState = (store: RootState) => store.tasks;
 
 export const getEntities = (store: RootState) => getState(store).get('entities');
 export const getList = (store: RootState) => getState(store).get('list');
 
 export const getItemsList = (store: RootState) => {
   const entities = Map({
-    workDays: getEntities(store),
+    tasks: getEntities(store),
   });
 
-  return denormalize(getList(store), [schemas.workDay], entities);
+  return denormalize(getList(store), [schemas.task], entities);
 };
 
 export const getItemsListLoaded = (store: RootState) => listLoadingProgress.getLoaded(getState(store));

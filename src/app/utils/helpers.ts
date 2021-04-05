@@ -24,3 +24,17 @@ export const useOutsideClicker = (
     };
   }, [buttonRef]);
 };
+
+export const groupByDate = (items) => {
+  const result = items.toJS().reduce((groupedItems, item) => {
+    const foundGroupIndex = groupedItems.findIndex((group) => group.date === item.date);
+    const groupedItemsCopy = groupedItems;
+    if (foundGroupIndex !== -1) {
+      groupedItemsCopy[foundGroupIndex].tasks.push(item);
+      return groupedItemsCopy;
+    }
+    return [...groupedItems, { date: item.date, tasks: [item] }];
+  }, []);
+
+  return result.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+};

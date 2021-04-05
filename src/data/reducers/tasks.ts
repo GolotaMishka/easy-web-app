@@ -1,20 +1,20 @@
 import { fromJS } from 'immutable';
-import * as constants from '../constants/work-days';
+import * as constants from '../constants/tasks';
 import LoadingProgress from '../utils/reducers/loading';
 
-export const listLoadingProgress = new LoadingProgress('workDaysList');
+export const listLoadingProgress = new LoadingProgress('tasksList');
 export const taskUpdationProgress = new LoadingProgress('taskUpdation');
 export const severalTaskUpdationProgress = new LoadingProgress('severalTaskUpdation');
 
 const mergeData = (state, payload) => {
   return state.withMutations((newState) => {
     const {
-      entities: { workDays },
+      entities: { tasks },
     } = payload;
 
-    if (!workDays) return;
-    fromJS(workDays).forEach((workDay) => {
-      newState.updateIn(['entities', workDay.get('id')], (prevWorkDay = workDay) => prevWorkDay.merge(workDay));
+    if (!tasks) return;
+    fromJS(tasks).forEach((task) => {
+      newState.updateIn(['entities', task.get('id')], (prevTask = task) => prevTask.merge(task));
     });
   });
 };
@@ -28,12 +28,9 @@ const loadList = (state, action) =>
 
 const updateTask = (state, action) =>
   state.withMutations((newState) => {
-    const { task, workDayId } = action.payload;
+    const { task } = action.payload;
 
-    newState.updateIn(['entities', workDayId, 'tasks'], (tasks) =>
-      tasks.map((taskOld) => (taskOld.get('id') === task.id ? fromJS(task) : taskOld)),
-    );
-
+    newState.setIn(['entities', task.id], fromJS(task));
     taskUpdationProgress.setLoaded(newState);
   });
 
@@ -50,18 +47,18 @@ export default (state = initialState, action) => {
     case constants.LIST_LOAD_SUCCESS:
       return loadList(state, action);
 
-    case constants.UPDATE_TASK_START:
+    case constants.UPDATE_ANSWER_START:
       return taskUpdationProgress.setLoading(state);
-    case constants.UPDATE_TASK_FAILED:
+    case constants.UPDATE_ANSWER_FAILED:
       return taskUpdationProgress.setLoadFailed(state);
-    case constants.UPDATE_TASK_SUCCESS:
+    case constants.UPDATE_ANSWER_SUCCESS:
       return updateTask(state, action);
 
-    case constants.UPDATE_SEVERAL_TASKS_START:
+    case constants.UPDATE_SEVERAL_ANSWERS_START:
       return severalTaskUpdationProgress.setLoading(state);
-    case constants.UPDATE_SEVERAL_TASKS_FAILED:
+    case constants.UPDATE_SEVERAL_ANSWERS_FAILED:
       return severalTaskUpdationProgress.setLoadFailed(state);
-    case constants.UPDATE_SEVERAL_TASKS_SUCCESS:
+    case constants.UPDATE_SEVERAL_ANSWERS_SUCCESS:
       return severalTaskUpdationProgress.setLoaded(state);
 
     case constants.CLEAR:

@@ -13,7 +13,7 @@
 
   &Header {
     align-items: center;
-    background-color: #71988c;
+    background-color: $primary;
     // border: 2px solid $primary;
     border-radius: 20px;
     box-sizing: border-box;
@@ -38,12 +38,12 @@
     }
 
     &ClosedBtn {
-      color: $dark;
+      color: $darkGreen;
       transition: 0.5s;
     }
 
     &OpenedBtn {
-      color: $dark;
+      color: $darkGreen;
       transform: rotate(180deg);
       transition: 0.5s;
     }
@@ -51,9 +51,9 @@
 
   &Content {
     background-color: $light;
-    border: 1px solid $dark;
+    border: 1px solid $light-grey;
+    border-radius: 4px;
     margin-top: 10px;
-    // border-radius: 4px;
     padding: 30px;
 
     &Description {
