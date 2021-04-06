@@ -6,12 +6,12 @@ import s from './styles.scss';
 
 interface TopicBlockProps {
   title: string;
-  topicIndex: string | number;
+  topicId: string | number;
 }
 
-const TopicBlock = ({ title, topicIndex }: TopicBlockProps): ReactElement => {
+const TopicBlock = ({ title, topicId }: TopicBlockProps): ReactElement => {
   return (
-    <Link to={knowledgePathDetail(topicIndex)} className={s.block}>
+    <Link to={knowledgePathDetail(topicId)} className={s.block}>
       <Text size={Text.sizes.l} weight={Text.weights.semiBold}>
         {title}
       </Text>

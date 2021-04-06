@@ -3,7 +3,8 @@ import { PrimaryButton, TextInput, Loader, Icon, Text, SecondaryButtonLink } fro
 import { Form, FormikErrors, FormikValues } from 'formik';
 import { Field } from 'app/utils';
 import Logo from 'public/logo.svg';
-import { signUpPath } from 'app/constants/url';
+import { signUpPath, appBasePath } from 'app/constants/url';
+import { Link } from 'react-router-dom';
 import s from './styles.scss';
 
 interface SignInProps {
@@ -16,7 +17,9 @@ const SignIn: React.FC<SignInProps> = ({ isSubmitting, isValid, errors }: SignIn
   return (
     <div className={s.page}>
       <div className={s.pageLeft}>
-        <img className={s.pageLeftLogo} src={Logo} alt="Logo easy web" />
+        <Link to={appBasePath}>
+          <img className={s.pageLeftLogo} src={Logo} alt="Logo easy web" />
+        </Link>
         <div className={s.pageLeftContent}>
           <Text
             className={s.pageLeftContentTitle}

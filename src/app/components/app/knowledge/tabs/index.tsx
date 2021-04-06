@@ -1,15 +1,15 @@
-import CSSTab from './css-tab';
-import HTMLTab from './html-tab';
+import GitTab from './git-tab';
+import HTMLCssTab from './html-css-tab';
 
 export const KnowledgeTabs = [
   {
-    title: 'HTML',
-    id: 'HTMLTab',
-    component: HTMLTab,
+    title: 'HTML + CSS',
+    id: 'HTMLCssTab',
+    component: HTMLCssTab,
   },
   {
-    title: 'CSS',
-    id: 'CSSTab',
-    component: CSSTab,
+    title: 'Git',
+    id: 'GitTab',
+    component: GitTab,
   },
 ];

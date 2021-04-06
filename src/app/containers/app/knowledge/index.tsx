@@ -9,7 +9,7 @@ const KnowledgeRoute = (): ReactElement => {
   return (
     <Switch>
       <Route exact path={knowledgePath} component={KnowledgeContainer} />
-      <Route path={knowledgePathDetail(':topicIndex')} component={TopicContainer} />
+      <Route path={knowledgePathDetail(':topicId')} component={TopicContainer} />
     </Switch>
   );
 };

@@ -1,10 +1,12 @@
 import React, { ReactElement } from 'react';
-// import KnowledgeComponent from 'app/components/app/knowledge';
+import TopicComponent from 'app/components/app/knowledge/topic';
 import { useParams } from 'react-router-dom';
+import { fullTopics } from 'app/constants/data';
 
 const TopicContainer = (): ReactElement => {
-  const { topicIndex } = useParams();
-  return <div>detail {topicIndex}</div>;
+  const { topicId } = useParams();
+  console.log(fullTopics[topicId], ' topic');
+  return <TopicComponent topic={fullTopics[topicId]} />;
 };
 
 export default TopicContainer;

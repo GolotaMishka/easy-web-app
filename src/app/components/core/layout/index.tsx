@@ -54,6 +54,15 @@ const Layout = ({ children, userDetails }: LayoutProps): ReactElement => {
               <Icon className={s.layoutHeaderMenuContentItemIcon} icon={Icon.icons.user} />
               <Text>Profile</Text>
             </Link>
+            <a
+              className={s.layoutHeaderMenuContentItem}
+              href="https://padlet.com/golotamm/wu8ijh69hcclgnhu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Icon className={s.layoutHeaderMenuContentItemIcon} icon={Icon.icons.settings} />
+              <Text>Padlet</Text>
+            </a>
             <button
               type="button"
               onClick={() => {

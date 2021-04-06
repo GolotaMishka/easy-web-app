@@ -86,7 +86,7 @@ const Profile = ({ isSubmitting, isValid, errors, profile }: ProfileProps): Reac
               component={TextInput}
               id="djinni"
               name="djinni"
-              placeholder="djinni"
+              placeholder="Djinni"
             />
           </div>
           <div className={s.pageFormRow}>

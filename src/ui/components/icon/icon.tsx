@@ -41,6 +41,7 @@ import mic from './icons/mic.svg';
 import chart from './icons/chart.svg';
 import checked from './icons/checked.svg';
 import paper from './icons/paper.svg';
+import settings from './icons/settings.svg';
 
 export interface IconProps extends React.SVGAttributes<SVGElement> {
   icon: any;
@@ -108,4 +109,5 @@ Icon.icons = {
   chart,
   checked,
   paper,
+  settings,
 };
