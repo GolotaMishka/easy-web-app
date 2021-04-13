@@ -2,6 +2,30 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const HtmlCssTopics = {
+  selectors: {
+    title: 'Selectors',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank" rel="noreferrer">
+              Cheatsheet
+            </a>
+          </li>
+          <li>
+            <a href="http://htmlbook.ru/index.php/css/selector" target="_blank" rel="noreferrer">
+              Article
+            </a>
+          </li>
+          <li>
+            <a href="https://frontend30.com/css-selectors-cheatsheet" target="_blank" rel="noreferrer">
+              Exercise
+            </a>
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   animationTransformation: {
     title: 'Animation, transformation',
     content: (): ReactElement => (
