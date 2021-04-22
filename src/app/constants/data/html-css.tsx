@@ -3,7 +3,7 @@ import s from './styles.scss';
 
 export const HtmlCssTopics = {
   reviews: {
-    title: 'Rviews',
+    title: 'Reviews',
     content: (): ReactElement => (
       <div className={s.content}>
         <ul>
