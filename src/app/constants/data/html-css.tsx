@@ -2,6 +2,27 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const HtmlCssTopics = {
+  reviews: {
+    title: 'Rviews',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            Review 20/04/2021
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/KkiKNHwToc4"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   preprocessors: {
     title: 'Sass',
     content: (): ReactElement => (
