@@ -8,6 +8,18 @@ export const HtmlCssTopics = {
       <div className={s.content}>
         <ul>
           <li>
+            Review 22/04/2021
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/ZdanWZiBh6Y"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+          <li>
             Review 20/04/2021
             <iframe
               style={{ width: '100%', marginTop: '15px' }}
@@ -18,6 +30,53 @@ export const HtmlCssTopics = {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+
+  boxSizing: {
+    title: 'box-sizing',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://developer.mozilla.org/ru/docs/Web/CSS/box-sizing" target="_blank" rel="noreferrer">
+              Mozilla article
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://medium.com/design-code-repository/cutup-7-box-sizing-61ed487b65f1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Medium article
+            </a>
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  inlineBlock: {
+    title: 'The display Property',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://www.w3schools.com/css/css_inline-block.asp" target="_blank" rel="noreferrer">
+              Article
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Try page
+            </a>
           </li>
         </ul>
       </div>
