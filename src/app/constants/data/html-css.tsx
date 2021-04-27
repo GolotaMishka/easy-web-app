@@ -2,6 +2,32 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const HtmlCssTopics = {
+  forms: {
+    title: 'Forms',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://www.tutorialrepublic.com/html-tutorial/html-forms.php" target="_blank" rel="noreferrer">
+              HTML Forms
+            </a>
+          </li>
+          <li>
+            Recorded lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/QoZvnYEd6wY"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   reviews: {
     title: 'Reviews',
     content: (): ReactElement => (
