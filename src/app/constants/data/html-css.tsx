@@ -2,6 +2,32 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const HtmlCssTopics = {
+  svg: {
+    title: 'SVG basics',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://www.digitalocean.com/community/tutorials/svg-svg-viewbox" target="_blank" rel="noreferrer">
+              Understand the SVG Viewbox
+            </a>
+          </li>
+          <li>
+            Recorded lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/DJnTkwhWWYk"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   forms: {
     title: 'Forms',
     content: (): ReactElement => (
