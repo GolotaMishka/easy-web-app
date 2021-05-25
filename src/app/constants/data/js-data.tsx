@@ -2,6 +2,37 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  variables: {
+    title: 'Variables',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/variables" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Variables
+            </a>
+          </li>
+          <li>
+            <a href="https://schoolsw3.com/js/js_variables.php" target="_blank" rel="noreferrer">
+              Schoolsw3 - Variables
+            </a>
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/3U_eeskwgII"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   practice: {
     title: 'Practice',
     content: (): ReactElement => (
