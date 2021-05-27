@@ -2,6 +2,42 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  types: {
+    title: 'Types',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/types" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Types
+            </a>
+          </li>
+          <li>
+            <a href="https://puzzleweb.ru/javascript/5_types.php" target="_blank" rel="noreferrer">
+              puzzleweb.ru - Types
+            </a>
+          </li>
+          <li>
+            <a href="https://learn.javascript.ru/operators" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Operators
+            </a>
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/KwcSqsNChF0"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   variables: {
     title: 'Variables',
     content: (): ReactElement => (
