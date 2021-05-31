@@ -2,6 +2,49 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  if_else: {
+    title: 'If,else',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/ifelse" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - If,else
+            </a>
+          </li>
+          <li>
+            <a href="https://learn.javascript.ru/logical-operators" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Logical operators
+            </a>
+          </li>
+          <li>
+            Logical operators(short video)
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/v=_0OzJN1saf0"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/-LIAJizb9AA"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   types: {
     title: 'Types',
     content: (): ReactElement => (
