@@ -2,6 +2,37 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  arrays: {
+    title: 'Arrays (basic)',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/array" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Array
+            </a>
+          </li>
+          <li>
+            <a href="https://www.cs.usfca.edu/~galles/visualization/StackArray.html" target="_blank" rel="noreferrer">
+              Array visualization
+            </a>
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/7KoL_7sjg84"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   if_else: {
     title: 'If,else',
     content: (): ReactElement => (
