@@ -2,6 +2,32 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  functions: {
+    title: 'Functions',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/function-basics" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Functions
+            </a>
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/mC0m61JUiDw"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   loops: {
     title: 'Loops',
     content: (): ReactElement => (
