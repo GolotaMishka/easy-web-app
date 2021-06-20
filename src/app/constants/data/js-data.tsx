@@ -2,6 +2,37 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  copyObjects: {
+    title: 'Object copy, methods',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/object-copy" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Object copy
+            </a>
+          </li>
+          <li>
+            <a href="https://learn.javascript.ru/keys-values-entries" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Object methods
+            </a>
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/v8rAxiHLetM"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   objectTopic: {
     title: 'Object',
     content: (): ReactElement => (
