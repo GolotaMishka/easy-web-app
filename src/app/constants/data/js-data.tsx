@@ -3,6 +3,49 @@ import s from './styles.scss';
 
 export const jsTopics = {
   copyObjects: {
+    title: 'Methods',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/object-methods" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Object methods
+            </a>
+          </li>
+          <li>
+            <a href="https://learn.javascript.ru/primitives-methods" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Primitives methods
+            </a>
+          </li>
+          <li>
+            Object methods
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/3d4AgrppqDc"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+          <li>
+            Methods(examples)
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/G3dQ8ub6VZ4"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  copyObjects: {
     title: 'Object copy, methods',
     content: (): ReactElement => (
       <div className={s.content}>
