@@ -2,6 +2,42 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  regularExpressions: {
+    title: 'Regular expressions',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/regexp-introduction" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Regular expressions
+            </a>
+          </li>
+          <li>
+            <a href="https://professorweb.ru/my/javascript/js_theory/level1/1_11.php" target="_blank" rel="noreferrer">
+              Deeper understanding
+            </a>
+          </li>
+          <li>
+            <a href="https://regex101.com/" target="_blank" rel="noreferrer">
+              Practice online
+            </a>
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/qPRrlbVzuCk"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   practice1: {
     title: 'Practice',
     content: (): ReactElement => (
