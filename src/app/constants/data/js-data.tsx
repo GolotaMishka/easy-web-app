@@ -2,6 +2,41 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  functions: {
+    title: 'Function (arguments, recursion)',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/rest-parameters-spread-operator" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Arguments
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://senior.ua/articles/rekursiya-dlya-nachinayuschih-v-javascript-s-8-primerami"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Recursion
+            </a>
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/B3TTu1hXbFc"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   regularExpressions: {
     title: 'Regular expressions',
     content: (): ReactElement => (
