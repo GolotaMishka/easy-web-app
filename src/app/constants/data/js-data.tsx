@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
-  functions: {
+  functionsDeeper: {
     title: 'Function (arguments, recursion)',
     content: (): ReactElement => (
       <div className={s.content}>
