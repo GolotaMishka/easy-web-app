@@ -2,6 +2,42 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  dom: {
+    title: 'DOM',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/dom-nodes" target="_blank" rel="noreferrer">
+              DOM tree
+            </a>
+          </li>
+          <li>
+            <a href="https://learn.javascript.ru/basic-dom-node-properties" target="_blank" rel="noreferrer">
+              Basic DOM node properties
+            </a>
+          </li>
+          <li>
+            <a href="https://www.javascripttutorial.net/javascript-dom/" target="_blank" rel="noreferrer">
+              Tutorial
+            </a>
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/P-_0QIvpa58"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   pageRendering: {
     title: 'Page rendering',
     content: (): ReactElement => (
