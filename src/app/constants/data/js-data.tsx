@@ -2,6 +2,60 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  intervals: {
+    title: 'setTimeout/setInterval',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/settimeout-setinterval" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - setTimeout, setInterval
+            </a>
+          </li>
+
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/HDv2nDpFRig"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
+  date: {
+    title: 'Date',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/datetime" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Date
+            </a>
+          </li>
+
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/O8bPkXGhg8w"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   forms: {
     title: 'Forms',
     content: (): ReactElement => (
