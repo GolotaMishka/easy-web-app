@@ -2,6 +2,20 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  tryCatch: {
+    title: 'try...catch',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/exception" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - try...catch
+            </a>
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   closure: {
     title: 'Closure',
     content: (): ReactElement => (
