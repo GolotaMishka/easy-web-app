@@ -2,6 +2,36 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  context: {
+    title: 'This',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this"
+              target="_blank"
+              rel="noreferrer"
+            >
+              MDN - This
+            </a>
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/D_hMwbTtlnc"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   tryCatch: {
     title: 'try...catch',
     content: (): ReactElement => (
