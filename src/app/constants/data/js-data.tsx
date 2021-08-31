@@ -2,6 +2,42 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  fetchAPI: {
+    title: 'Fetch, API call',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://learn.javascript.ru/fetch" target="_blank" rel="noreferrer">
+              LearnJavaScript.ru - Fetch
+            </a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="_blank" rel="noreferrer">
+              Http methods
+            </a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/ru/docs/Web/HTTP/Status" target="_blank" rel="noreferrer">
+              Http status
+            </a>
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/2bLfp4okCpo"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   context: {
     title: 'This',
     content: (): ReactElement => (
