@@ -2,6 +2,36 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const jsTopics = {
+  classes: {
+    title: 'Classes',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Classes
+            </a>
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/Df9sws99xIM"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   oop: {
     title: 'OOP',
     content: (): ReactElement => (
