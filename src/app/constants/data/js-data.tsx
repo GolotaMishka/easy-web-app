@@ -21,7 +21,7 @@ export const jsTopics = {
             <iframe
               style={{ width: '100%', marginTop: '15px' }}
               height="440"
-              src="https://www.youtube.com/embed/ti79mrSaMt0"
+              src="https://www.youtube.com/embed/fNINYGolfuc"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
