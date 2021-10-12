@@ -2,6 +2,32 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const reactTopics = {
+  componentsProps: {
+    title: 'Components, props',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://reactjs.org/docs/components-and-props.html" target="_blank" rel="noreferrer">
+              Components, props
+            </a>
+          </li>
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/Yo-jXEBN20k"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   jsxTopic: {
     title: 'JSX',
     content: (): ReactElement => (
