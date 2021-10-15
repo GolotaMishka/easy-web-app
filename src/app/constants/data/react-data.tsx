@@ -29,7 +29,7 @@ export const reactTopics = {
             <iframe
               style={{ width: '100%', marginTop: '15px' }}
               height="440"
-              src="https://www.youtube.com/embed/6hAUJMIkMes"
+              src="https://www.youtube.com/embed/2u0wsIQ5g-c"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
