@@ -2,6 +2,38 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const reactTopics = {
+  lifecycle: {
+    title: 'Lifecycle',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a href="https://habr.com/ru/post/358090" target="_blank" rel="noreferrer">
+              Lifecycle
+            </a>
+          </li>
+          <li>
+            <a href="https://reactjs.org/docs/faq-ajax.html" target="_blank" rel="noreferrer">
+              How to send requests
+            </a>
+          </li>
+
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/2qxRzFdKShzM"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   componentsState: {
     title: 'State',
     content: (): ReactElement => (
