@@ -2,6 +2,42 @@ import React, { ReactElement } from 'react';
 import s from './styles.scss';
 
 export const reactTopics = {
+  reactForms: {
+    title: 'Events, forms',
+    content: (): ReactElement => (
+      <div className={s.content}>
+        <ul>
+          <li>
+            <a
+              href="https://reactjs.org/docs/handling-events.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Handling events
+            </a>
+          </li>
+          <li>
+            <a href="https://reactjs.org/docs/forms.html" target="_blank" rel="noreferrer">
+              Forms
+            </a>
+          </li>
+
+          <li>
+            Lesson
+            <iframe
+              style={{ width: '100%', marginTop: '15px' }}
+              height="440"
+              src="https://www.youtube.com/embed/XUGUM3lmh6o"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </li>
+        </ul>
+      </div>
+    ),
+  },
   routing: {
     title: 'Routing',
     content: (): ReactElement => (
