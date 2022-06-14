@@ -52,7 +52,7 @@
     "react-animate-height": "^2.0.23",
     "react-day-picker": "^7.4.8",
     "react-dom": "^16.13.1",
-    "react-dropzone": "^11.2.4",
+    "react-dropzone": "^11.7.1",
     "react-hot-loader": "^4.12.21",
     "react-immutable-proptypes": "^2.2.0",
     "react-month-picker": "^2.2.0",
